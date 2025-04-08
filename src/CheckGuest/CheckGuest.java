@@ -12,19 +12,30 @@ public class CheckGuest {
         System.out.print("Inserire nome da conntrollare");
         String toCheck = in.nextLine();
         in.close();
-        int i = 0;
-        boolean isPresent = false;
 
-        while (guests.length != i && guests[i] != toCheck) {
-            if (guests[i].toLowerCase().trim().equals(toCheck.toLowerCase().trim())){
-                isPresent=true;
+        boolean notBreak = true;
+        int i;
+        for (i = 0; i < guests.length && notBreak; i++) {
+            if (guests[i].toLowerCase().trim().equals(toCheck.toLowerCase().trim())) {
                 System.out.print("Il nome è presente nella lista");
-                
+                notBreak = false;
             }
-                i++;
-        } 
-        if (!isPresent) {
+        }
+        if (guests.length == i) {
             System.out.print("Il nome non è presente");
         }
+        // int i = 0;
+        // boolean isPresent = false;
+        // while (guests.length != i && guests[i] != toCheck) {
+        // if (guests[i].toLowerCase().trim().equals(toCheck.toLowerCase().trim())){
+        // isPresent=true;
+        // System.out.print("Il nome è presente nella lista");
+
+        // }
+        // i++;
+        // }
+        // if (!isPresent) {
+        // System.out.print("Il nome non è presente");
+        // }
     }
 }
