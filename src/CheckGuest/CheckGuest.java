@@ -12,7 +12,7 @@ public class CheckGuest {
         System.out.print("Inserire nome da conntrollare");
         String toCheck = in.nextLine();
         in.close();
-
+        //////////////////for
         boolean notBreak = true;
         int i;
         for (i = 0; i < guests.length && notBreak; i++) {
@@ -24,6 +24,7 @@ public class CheckGuest {
         if (guests.length == i) {
             System.out.print("Il nome non è presente");
         }
+        /////////////////////////while
         // int i = 0;
         // boolean isPresent = false;
         // while (guests.length != i && guests[i] != toCheck) {
